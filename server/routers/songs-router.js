@@ -67,8 +67,8 @@ router.put('/:id', (request, response) => {
     })
 })
 
-router.post('/add', (request, response) => {
-  const song = request.body;
+router.post('/', (request, response) => {
+  const song = request.body.song;
   console.log('Add song:', song);
 
   const sqlText = `INSERT INTO songs 
